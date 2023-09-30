@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c17hd6n4sib6p"]
+[gd_scene load_steps=3 format=3 uid="uid://c17hd6n4sib6p"]
+
+[ext_resource type="Script" path="res://Scripts/enemyBalls.gd" id="1_7mc6d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4meyj"]
-radius = 20.0
+radius = 29.57
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_7mc6d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4meyj")
