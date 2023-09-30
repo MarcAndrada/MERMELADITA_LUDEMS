@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsbdmy0x7affx"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_k641m"]
+[ext_resource type="PackedScene" uid="uid://bf36yld7hkrah" path="res://Scenes/Player.tscn" id="1_rkldl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ny67"]
+size = Vector2(309.425, 20)
+
+[node name="Main" type="Node2D"]
+position = Vector2(0, 2)
+script = ExtResource("1_k641m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(834, 858)
+scale = Vector2(10.345, 10.345)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_4ny67")
+
+[node name="Player" parent="." instance=ExtResource("1_rkldl")]
+position = Vector2(750, 253)
+
+[node name="positions" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="positions"]
+position = Vector2(323, 361)
+
+[node name="Marker2D2" type="Marker2D" parent="positions"]
+position = Vector2(1527, 361)
+
+[node name="Marker2D3" type="Marker2D" parent="positions"]
+position = Vector2(585, 361)
+
+[node name="Marker2D4" type="Marker2D" parent="positions"]
+position = Vector2(1148, 340)
+
+[node name="Marker2D5" type="Marker2D" parent="positions"]
+position = Vector2(107, 361)
+
+[node name="Marker2D6" type="Marker2D" parent="positions"]
+position = Vector2(886, 361)
