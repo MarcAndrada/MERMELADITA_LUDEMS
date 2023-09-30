@@ -44,6 +44,8 @@ func MovePlayer(delta):
 	
 	#Apply speed
 	linear_velocity = inputValue * speed * acceleration * delta
+	print(linear_velocity)
+	
 
 func ChangeRotation(delta):
 	pass
