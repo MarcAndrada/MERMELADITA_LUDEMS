@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcvtg0pg0c472"]
+
+[ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_3kfxq"]
+
+[node name="Camera2D" type="Camera2D"]
+offset = Vector2(800, 450)
+script = ExtResource("1_3kfxq")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
