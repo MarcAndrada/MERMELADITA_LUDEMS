@@ -9,7 +9,6 @@ size = Vector2(102, 1661)
 
 [node name="Player" parent="." instance=ExtResource("1_aly81")]
 position = Vector2(805.53, 415.625)
-accelerationSpeed = 5.0
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(788, -6)
