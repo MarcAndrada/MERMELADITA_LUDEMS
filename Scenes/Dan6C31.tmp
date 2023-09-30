@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxrud80sp5s56"]
+[gd_scene load_steps=5 format=3 uid="uid://cxrud80sp5s56"]
 
 [ext_resource type="Texture2D" uid="uid://dyw5bw5ffhc68" path="res://Sprites/Torus.png" id="1_l6fss"]
 [ext_resource type="PackedScene" uid="uid://bcvtg0pg0c472" path="res://Scenes/MainCamera.tscn" id="2_dlqjy"]
 [ext_resource type="PackedScene" uid="uid://dgadp4otidnvo" path="res://Scenes/player.tscn" id="2_kd71i"]
+[ext_resource type="Script" path="res://Scenes/Global.gd" id="4_gah8j"]
 
 [node name="DaniScene" type="Node2D"]
 
@@ -20,3 +21,6 @@ position = Vector2(797, 453)
 
 [node name="MainCamera" parent="." instance=ExtResource("2_dlqjy")]
 position = Vector2(800, 450)
+
+[node name="Global" type="Node" parent="."]
+script = ExtResource("4_gah8j")
