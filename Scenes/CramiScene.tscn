@@ -1,3 +1,56 @@
-[gd_scene format=3 uid="uid://c8pxtkio3dfl5"]
+[gd_scene load_steps=5 format=3 uid="uid://c8pxtkio3dfl5"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_o5yh5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yod3m"]
+friction = 0.0
+rough = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oamhq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp2rm"]
+size = Vector2(102, 1661)
 
 [node name="CramiScena" type="Node2D"]
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2(813, 448)
+physics_material_override = SubResource("PhysicsMaterial_yod3m")
+gravity_scale = 0.0
+continuous_cd = 2
+lock_rotation = true
+script = ExtResource("1_o5yh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_oamhq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(788, -6)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-1.43051e-06, -43.5)
+shape = SubResource("RectangleShape2D_sp2rm")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1622, 588)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(22, -111.75)
+shape = SubResource("RectangleShape2D_sp2rm")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(18, 394)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("RectangleShape2D_sp2rm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(783, 907)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_sp2rm")
