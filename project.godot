@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mermeladita Ludems"
-run/main_scene="res://Scenes/main_balls.tscn"
+run/main_scene="res://Balls/main_balls.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://Particulas/icon.svg"
 
@@ -59,4 +59,5 @@ Parry={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

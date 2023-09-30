@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c17hd6n4sib6p"]
+
+[ext_resource type="Script" path="res://Balls/enemyBalls.gd" id="1_r81p6"]
+[ext_resource type="Texture2D" uid="uid://dps8we7oavnwm" path="res://Sprites/descarga.png" id="2_mq6p2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4meyj"]
+radius = 29.57
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_r81p6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_4meyj")
+one_way_collision_margin = 22.9
+debug_color = Color(0.996078, 0, 0.243137, 0.968627)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mq6p2")
