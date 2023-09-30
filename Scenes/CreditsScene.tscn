@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg2k6wx0pdo6c"]
+
+[ext_resource type="Script" path="res://Scripts/CreditsScene.gd" id="1_7k385"]
+
+[node name="CreditsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7k385")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 445.0
+offset_right = 1155.0
+offset_bottom = 900.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="PauLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Pau \"PauGi\" Giró"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AaronLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Aarón \"Rimbeldi\" Deza"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarcosLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Marcos \"JonDesayun\" Ruiz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AlexLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Alejandro \"AlexRP\" Rubio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JuditLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Judit \"Mivi\" Espígol"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CarolLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Carolina \"Carol\" Monteagudo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DaniLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Dani \"Gemix\" Martínez"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarcLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Marc \"Crami\" Andrada"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1442.0
+offset_top = 803.0
+offset_right = 1580.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
