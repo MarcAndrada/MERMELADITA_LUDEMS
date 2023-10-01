@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dyw5bw5ffhc68" path="res://Sprites/Torus.png" id="1_l6fss"]
 [ext_resource type="PackedScene" uid="uid://bcvtg0pg0c472" path="res://Scenes/MainCamera.tscn" id="2_dlqjy"]
-[ext_resource type="PackedScene" uid="uid://dgadp4otidnvo" path="res://Scenes/player.tscn" id="2_kd71i"]
+[ext_resource type="PackedScene" uid="uid://d0dsvb5rc2c82" path="res://Scenes/player.tscn" id="2_kd71i"]
 
 [node name="DaniScene" type="Node2D"]
 
