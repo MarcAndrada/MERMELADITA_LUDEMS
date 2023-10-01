@@ -8,13 +8,13 @@ extends RigidBody2D
 #Variables Parry
 @onready var isParring := false
 @onready var canParry := true
-@onready var parryDuration : float = 1.0
+@onready var parryDuration : float = 0.2
 @onready var timeWaitedParring : float = 0.0
 @onready var parryCD : float = 1.0
 @onready var timeWaitedParryCD : float = 0.0
 
-@onready var minScale : float= 1.0
-@onready var maxScale : float= 3.0
+@onready var minScale : float= 0.196
+@onready var maxScale : float= 0.5
 @onready var lerpProcess : float
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -83,21 +83,24 @@ func WaitParryCD(delta : float):
 	if timeWaitedParryCD >= parryCD:
 		timeWaitedParryCD = 0.0
 		canParry = true
-		lerpProcess = 0.0
+
 
 func ScalingParry(delta : float):
 	if isParring:
-		lerpProcess += (parryDuration / 2) * delta   
+		lerpProcess += delta / 0.1  
 		if lerpProcess > 1:
 			lerpProcess = 1
 		var lerpValue = lerp(minScale, maxScale, lerpProcess)
 		$MainSprite.scale = Vector2(lerpValue,lerpValue)
-		print("Escalando", lerpValue)
-	elif $MainSprite.scale.x > 1:
-		lerpProcess += (parryCD / 2) * delta
+		print("Escalando", lerpValue, " - Lerp process - ",lerpProcess)
+	elif $MainSprite.scale.x > minScale:
+		lerpProcess += delta / 0.3
 		if lerpProcess > 1:
 			lerpProcess = 1
 		var lerpValue = lerp(maxScale, minScale, lerpProcess)
 		$MainSprite.scale = Vector2(lerpValue,lerpValue)
-		print("Escalando", lerpValue)
+		#Reseteamos el valor del lerp
+		if lerpValue == minScale:
+			lerpProcess = 0.0
+		print("Desescalando", lerpValue)
 		

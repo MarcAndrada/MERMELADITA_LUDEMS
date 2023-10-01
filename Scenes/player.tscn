@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0dsvb5rc2c82"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_hk4ao"]
-[ext_resource type="Texture2D" uid="uid://cmou2m4wfiv36" path="res://Sprites/icon2.svg" id="2_1i47e"]
+[ext_resource type="Texture2D" uid="uid://dtgwp42xa3pw7" path="res://Sprites/Player.png" id="2_ja4ra"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yod3m"]
 friction = 0.0
@@ -21,4 +21,6 @@ script = ExtResource("1_hk4ao")
 shape = SubResource("RectangleShape2D_oamhq")
 
 [node name="MainSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_1i47e")
+position = Vector2(-3.86238e-05, -2.38419e-07)
+scale = Vector2(0.196079, 0.196078)
+texture = ExtResource("2_ja4ra")
